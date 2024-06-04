@@ -11,8 +11,7 @@ class CaptainsLog {
     }
 
     char randomPlanetClass() {
-        int planet = random.nextInt(PLANET_CLASSES.length);
-        return PLANET_CLASSES[planet];
+        return PLANET_CLASSES[random.nextInt(PLANET_CLASSES.length)];
     }
 
     String randomShipRegistryNumber() {
