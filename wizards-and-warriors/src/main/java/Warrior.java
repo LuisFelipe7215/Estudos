@@ -3,4 +3,9 @@ public class Warrior extends  Fighter{
     public String toString() {
         return "Fighter is a Warrior";
     }
+
+    @Override
+    boolean isVulnerable() {
+        return false;
+    }
 }
