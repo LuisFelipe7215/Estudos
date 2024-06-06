@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Wizard {
+public class Wizard extends Fighter {
+
 }
