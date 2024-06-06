@@ -13,4 +13,9 @@ public class Wizard extends Fighter {
     boolean isVulnerable() {
         return isSpellNotPrepared;
     }
+
+    @Override
+    int getDamagePoints(Fighter fighter) {
+        return isSpellNotPrepared ? 3 : 12;
+    }
 }
