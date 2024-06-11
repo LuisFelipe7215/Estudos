@@ -1,4 +1,4 @@
-class ProductionRemoteControlCar {
+class ProductionRemoteControlCar implements RemoteControlCar {
 
     public void drive() {
         throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.drive() method");
