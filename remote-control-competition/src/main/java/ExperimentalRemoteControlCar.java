@@ -1,7 +1,7 @@
 public class ExperimentalRemoteControlCar implements RemoteControlCar {
-
+    int units;
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ExperimentalRemoteControlCar.drive() method");
+        units += 20;
     }
 
     public int getDistanceTravelled() {
