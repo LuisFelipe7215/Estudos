@@ -5,7 +5,7 @@ class ProductionRemoteControlCar implements RemoteControlCar {
     }
 
     public int getDistanceTravelled() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getDistanceTravelled() method");
+        return units;
     }
 
     public int getNumberOfVictories() {
