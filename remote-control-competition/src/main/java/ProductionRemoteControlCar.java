@@ -3,7 +3,7 @@ class ProductionRemoteControlCar implements RemoteControlCar, Comparable<Product
     Integer numberOfVictories;
     @Override
     public int compareTo(ProductionRemoteControlCar o) {
-        return 0;
+        return this.numberOfVictories.compareTo(o.getNumberOfVictories());
     }
 
     public void drive() {
@@ -14,7 +14,7 @@ class ProductionRemoteControlCar implements RemoteControlCar, Comparable<Product
         return units;
     }
 
-    public int getNumberOfVictories() {
+    public Integer getNumberOfVictories() {
         return this.numberOfVictories;
     }
 
