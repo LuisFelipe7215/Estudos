@@ -15,7 +15,7 @@ class ProductionRemoteControlCar implements RemoteControlCar, Comparable<Product
     }
 
     public int getNumberOfVictories() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getNumberOfVictories() method");
+        return this.numberOfVictories;
     }
 
     public void setNumberOfVictories(int numberOfVictories) {
