@@ -1,21 +1,33 @@
 public class LogLine {
     private final String logLine;
+    public LogLevel logLevel;
 
     public LogLine(String logLine) {
-        char[] chars = logLine.toCharArray();
         StringBuilder sb = new StringBuilder();
 
-        for (char c : chars) {
-            if (Character.isUpperCase(c)){
-                sb.append(c);
+        for (String s : logLine.split(":")) {
+            for (char c : s.toCharArray()) {
+                if (Character.isUpperCase(c)) {
+                    sb.append(c);
+                }
             }
+            break;
         }
 
         this.logLine = sb.toString();
     }
 
     public LogLevel getLogLevel() {
-        throw new UnsupportedOperationException("Please implement the getLogLevel() method");
+        switch (logLine) {
+            case "TRC" -> logLevel = LogLevel.TRACE;
+            case "DBG" -> logLevel = LogLevel.DEBUG;
+            case "INF" -> logLevel = LogLevel.INFO;
+            case "WRN" -> logLevel = LogLevel.WARNING;
+            case "ERR" -> logLevel = LogLevel.ERROR;
+            case "FTL" -> logLevel = LogLevel.FATAL;
+        }
+
+        return logLevel;
     }
 
     public String getOutputForShortLog() {
