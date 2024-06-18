@@ -25,6 +25,7 @@ public class LogLine {
             case "WRN" -> logLevel = LogLevel.WARNING;
             case "ERR" -> logLevel = LogLevel.ERROR;
             case "FTL" -> logLevel = LogLevel.FATAL;
+            default -> logLevel = LogLevel.UNKNOWN;
         }
 
         return logLevel;
