@@ -1,10 +1,11 @@
 public class LogLine {
     private final String logLine;
     public LogLevel logLevel;
+    public String message;
 
     public LogLine(String logLine) {
         StringBuilder sb = new StringBuilder();
-
+        message = logLine;
         for (String s : logLine.split(":")) {
             for (char c : s.toCharArray()) {
                 if (Character.isUpperCase(c)) {
@@ -13,7 +14,6 @@ public class LogLine {
             }
             break;
         }
-
         this.logLine = sb.toString();
     }
 
@@ -28,10 +28,14 @@ public class LogLine {
             default -> logLevel = LogLevel.UNKNOWN;
         }
 
-        return logLevel;
+        return this.logLevel;
     }
 
     public String getOutputForShortLog() {
-        throw new UnsupportedOperationException("Please implement the getOutputForShortLog() method");
+        String shortFormat = "";
+        for (String s : message.split(":")) {
+            shortFormat = String.format("%d:%s", getLogLevel().getLevelNumber(), s.trim());
+        }
+        return shortFormat;
     }
 }
