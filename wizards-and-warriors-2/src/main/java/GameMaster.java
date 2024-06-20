@@ -12,7 +12,9 @@ public class GameMaster {
         return travelMethod.name().equalsIgnoreCase("horseback") ? "You're traveling to your destination on horseback." : "You're traveling to your destination by walking.";
     }
 
-    // TODO: define a 'describe' method that returns a description of a Character, Destination and TravelMethod
+    public static String describe(Character character, Destination destination, TravelMethod travelMethod) {
+        return String.format("%s %s %s", describe(character), describe(travelMethod), describe(destination));
+    }
 
     // TODO: define a 'describe' method that returns a description of a Character and Destination
 }
