@@ -16,5 +16,7 @@ public class GameMaster {
         return String.format("%s %s %s", describe(character), describe(travelMethod), describe(destination));
     }
 
-    // TODO: define a 'describe' method that returns a description of a Character and Destination
+    public static String describe(Character character, Destination destination){
+        return String.format("%s You're traveling to your destination by walking. %s", describe(character), describe(destination));
+    }
 }
