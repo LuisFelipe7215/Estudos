@@ -9,7 +9,7 @@ class GottaSnatchEmAll {
     }
 
     static boolean addCard(String card, Set<String> collection) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.addCard() method");
+        return collection.add(card);
     }
 
     static boolean canTrade(Set<String> myCollection, Set<String> theirCollection) {
