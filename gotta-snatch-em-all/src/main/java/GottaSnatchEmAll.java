@@ -1,6 +1,4 @@
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 class GottaSnatchEmAll {
 
@@ -13,7 +11,7 @@ class GottaSnatchEmAll {
     }
 
     static boolean canTrade(Set<String> myCollection, Set<String> theirCollection) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.canTrade() method");
+        return !myCollection.isEmpty() && !theirCollection.isEmpty() && !myCollection.containsAll(theirCollection) && myCollection.size() == theirCollection.size();
     }
 
     static Set<String> commonCards(List<Set<String>> collections) {
