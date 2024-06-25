@@ -26,6 +26,8 @@ class GottaSnatchEmAll {
     }
 
     static Set<String> allCards(List<Set<String>> collections) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.allCards() method");
+        Set<String> allCollections = new HashSet<>();
+        collections.forEach(allCollections::addAll);
+        return allCollections;
     }
 }
