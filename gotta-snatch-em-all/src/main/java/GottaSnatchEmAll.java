@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 class GottaSnatchEmAll {
 
@@ -15,7 +16,13 @@ class GottaSnatchEmAll {
     }
 
     static Set<String> commonCards(List<Set<String>> collections) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.commonCards() method");
+        Set<String> commonsCards = new HashSet<>(collections.getFirst());
+
+        for (Set<String> collection : collections) {
+            commonsCards.retainAll(collection);
+        }
+
+        return commonsCards;
     }
 
     static Set<String> allCards(List<Set<String>> collections) {
