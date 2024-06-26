@@ -17,11 +17,7 @@ class GottaSnatchEmAll {
 
     static Set<String> commonCards(List<Set<String>> collections) {
         Set<String> commonsCards = new HashSet<>(collections.getFirst());
-
-        for (Set<String> collection : collections) {
-            commonsCards.retainAll(collection);
-        }
-
+        collections.forEach(commonsCards::retainAll);
         return commonsCards;
     }
 
