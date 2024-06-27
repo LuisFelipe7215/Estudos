@@ -8,7 +8,7 @@ public class Secrets {
     }
 
     public static int flipBits(int value, int mask) {
-        throw new UnsupportedOperationException("Please implement the (static) Secrets.flipBits() method");
+        return mask ^ value;
     }
 
     public static int clearBits(int value, int mask) {
