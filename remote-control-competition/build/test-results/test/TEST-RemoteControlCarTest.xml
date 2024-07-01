@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RemoteControlCarTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-06-13T15:01:32" hostname="PLATINEX" time="0.34">
+  <properties/>
+  <testcase name="The ExperimentalRemoteControlCar is an instance of the RemoteControlCar interface" classname="RemoteControlCarTest" time="0.16"/>
+  <testcase name="The ProductionRemoteControlCar implements the Comparable interface" classname="RemoteControlCarTest" time="0.016"/>
+  <testcase name="The getDistanceTravelled method of the ProductionRemoteControlCar returns 10 after driving once" classname="RemoteControlCarTest" time="0.022"/>
+  <testcase name="The getRankedCars returns a list of multiple cars sorted by number of victories" classname="RemoteControlCarTest" time="0.019"/>
+  <testcase name="The TestTrack.race method uses the drive method on the remote control car" classname="RemoteControlCarTest" time="0.009"/>
+  <testcase name="The getDistanceTravelled method of the ExperimentalRemoteControlCar returns 20 after driving once" classname="RemoteControlCarTest" time="0.006"/>
+  <testcase name="The ProductionRemoteControlCar is an instance of the RemoteControlCar interface" classname="RemoteControlCarTest" time="0.014"/>
+  <testcase name="The getRankedCars returns a list of two cars sorted by number of victories" classname="RemoteControlCarTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
